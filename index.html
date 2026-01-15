@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>FLORES</title>
+</head>
+<script>
+  function playMusic() {
+    const audio = document.getElementById("music");
+
+    audio.volume = 0;      // empieza en silencio
+    audio.play();
+
+    let volume = 0;
+    const fadeIn = setInterval(() => {
+      if (volume < 0.6) { // volumen final (ajústalo si quieres)
+        volume += 0.02;
+        audio.volume = volume;
+      } else {
+        clearInterval(fadeIn);
+      }
+    }, 150); // velocidad del fade
+  }
+</script>
+<body>
+    <audio id="music" src="img/Floricienta.mp3"></audio>
+    <div class="greetings">
+
+        <span>H</span>
+        <span>O</span>
+        <span>L</span>
+        <span>A</span>
+    </div>
+    <div class="greetings">
+        <span>M</span>
+        <span>A</span>
+        <span>R</span>
+        <span>I</span>
+        <span>A</span>
+        <span>N</span>
+        <span>A</span>
+    </div>
+    
+    <div class="description">
+        <span>Tengo una sorpresa, dale al boton</span>
+    </div>
+    <div class="button">
+        <button onclick="playMusic()">
+        <a href="FLORES.html">Haga Clic</a>
+        </button>
+        
+    </div>
+</body>
+</html>
