@@ -12,22 +12,22 @@
   function playMusic() {
     const audio = document.getElementById("music");
 
-    audio.volume = 0;      // empieza en silencio
+    audio.volume = 0;      
     audio.play();
 
     let volume = 0;
     const fadeIn = setInterval(() => {
-      if (volume < 0.6) { // volumen final (ajústalo si quieres)
+      if (volume < 0.6) { 
         volume += 0.02;
         audio.volume = volume;
       } else {
         clearInterval(fadeIn);
       }
-    }, 150); // velocidad del fade
+    }, 150); 
   }
 </script>
 <body>
-    <audio id="music" src="img/Floricienta.mp3"></audio>
+    <audio id="music" src="img/Audio.mpeg"></audio>
     <div class="greetings">
 
         <span>H</span>

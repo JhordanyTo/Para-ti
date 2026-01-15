@@ -12,7 +12,6 @@
   window.addEventListener("load", () => {
     const audio = document.getElementById("music");
 
-    // Esperamos a que las flores "nazcan"
     setTimeout(() => {
       audio.volume = 0;
       audio.play();
@@ -26,11 +25,11 @@
           clearInterval(fadeIn);
         }
       }, 150);
-    }, 3000); // ⏱️ tiempo sincronizado con animación
+    }, 3000); 
   });
 </script>
 <body class="container">
-    <audio id="music" src="img/Floricienta.mp3" loop></audio>
+    <audio id="music" src="img/Audio.mpeg" loop></audio>
     <div class="night"></div>
     <div class="birthday-message">
     <h1>🎉 Feliz Cumpleaños 🎉</h1>
